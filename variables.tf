@@ -8,6 +8,8 @@ Required:
     - resource_group_name
     - row_key
     - storage_account_key
+    - storage_account_key_key_vault_id (alternative to storage_account_key - read from Key Vault instead)
+    - storage_account_key_key_vault_secret_name (alternative to storage_account_key - read from Key Vault instead)
     - storage_account_name
     - stream_analytics_job_name
     - table
@@ -16,16 +18,18 @@ Optional:
 EOT
 
   type = map(object({
-    batch_size                = number
-    name                      = string
-    partition_key             = string
-    resource_group_name       = string
-    row_key                   = string
-    storage_account_key       = string
-    storage_account_name      = string
-    stream_analytics_job_name = string
-    table                     = string
-    columns_to_remove         = optional(list(string))
+    batch_size                                = number
+    name                                      = string
+    partition_key                             = string
+    resource_group_name                       = string
+    row_key                                   = string
+    storage_account_key                       = string
+    storage_account_key_key_vault_id          = optional(string)
+    storage_account_key_key_vault_secret_name = optional(string)
+    storage_account_name                      = string
+    stream_analytics_job_name                 = string
+    table                                     = string
+    columns_to_remove                         = optional(list(string))
   }))
 }
 
