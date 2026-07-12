@@ -1,3 +1,7 @@
+output "stream_analytics_output_tables_id" {
+  description = "Map of id values across all stream_analytics_output_tables, keyed the same as var.stream_analytics_output_tables"
+  value       = { for k, v in azurerm_stream_analytics_output_table.stream_analytics_output_tables : k => v.id }
+}
 output "stream_analytics_output_tables_batch_size" {
   description = "Map of batch_size values across all stream_analytics_output_tables, keyed the same as var.stream_analytics_output_tables"
   value       = { for k, v in azurerm_stream_analytics_output_table.stream_analytics_output_tables : k => v.batch_size }
