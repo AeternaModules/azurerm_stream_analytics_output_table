@@ -8,8 +8,8 @@ Required:
     - resource_group_name
     - row_key
     - storage_account_key
-    - storage_account_key_key_vault_id (alternative to storage_account_key - read from Key Vault instead)
-    - storage_account_key_key_vault_secret_name (alternative to storage_account_key - read from Key Vault instead)
+    - storage_account_key_key_vault_id (optional, alternative to storage_account_key)
+    - storage_account_key_key_vault_secret_name (optional, alternative to storage_account_key)
     - storage_account_name
     - stream_analytics_job_name
     - table
